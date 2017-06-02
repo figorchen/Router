@@ -1,8 +1,8 @@
 /**
- * 项目名称：工具库 <br/>
- * 文件名称: Utils.java <br/>
+ * 项目名称：工具库
+ * 文件名称: Utils.java
  * <p/>
- * Created by 谌珂 on 2015/12/30.  <br/>
+ * Created by 谌珂 on 2015/12/30.
  */
 package com.jianke.router;
 
@@ -11,19 +11,19 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 /**
- * 项目名称：工具库 <br/>
- * 类  名: Utils <br/>
- * 类描述: <br/>
- * 实现的主要功能 <br/>
- * 版    本：1.0.0 <br/>
- * 修改时间：2015/12/30 <br/>
- * @author 谌珂 <br/>
+ * 项目名称：工具库
+ * 类  名: Utils
+ * 类描述:
+ * 实现的主要功能
+ * 版    本：1.0.0
+ * 修改时间：2015/12/30
+ * @author 谌珂
  */
 public class Utils {
     /**
-     * 描 述：int数组转Integer数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：int数组转Integer数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的int[]
      * @return Integer[]
      */
@@ -36,9 +36,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Integer数组转int数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Integer数组转int数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Integer[]
      * @return int[]
      */
@@ -51,9 +51,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：short数组转Short数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：short数组转Short数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的short[]
      * @return Short[]
      */
@@ -66,9 +66,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Short数组转short数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Short数组转short数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Short[]
      * @return short[]
      */
@@ -81,9 +81,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：double数组转Double数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：double数组转Double数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的double[]
      * @return Double[]
      */
@@ -96,9 +96,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Double数组转double数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Double数组转double数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Double[]
      * @return double[]
      */
@@ -111,9 +111,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：float数组转Float数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：float数组转Float数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的float[]
      * @return Float[]
      */
@@ -126,9 +126,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Float数组转float数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Float数组转float数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Float[]
      * @return float[]
      */
@@ -141,9 +141,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：boolean数组转Boolean数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：boolean数组转Boolean数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的boolean[]
      * @return Boolean[]
      */
@@ -156,9 +156,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Boolean数组转boolean数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Boolean数组转boolean数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Boolean[]
      * @return boolean[]
      */
@@ -171,9 +171,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：long数组转Long数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：long数组转Long数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的long[]
      * @return Long[]
      */
@@ -186,9 +186,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Long数组转long数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Long数组转long数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Long[]
      * @return long[]
      */
@@ -201,9 +201,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：byte数组转Byte数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：byte数组转Byte数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的byte[]
      * @return Byte[]
      */
@@ -216,9 +216,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Byte数组转byte数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Byte数组转byte数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Byte[]
      * @return byte[]
      */
@@ -231,9 +231,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：char数组转Character数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：char数组转Character数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的char[]
      * @return Character[]
      */
@@ -246,9 +246,9 @@ public class Utils {
     }
 
     /**
-     * 描 述：Character数组转char数组<br/>
-     * 作者：谌珂<br/>
-     * 历 史: (版本) 谌珂 2015/12/30 注释 <br/>
+     * 描 述：Character数组转char数组
+     * 作者：谌珂
+     * 历 史: (版本) 谌珂 2015/12/30 注释
      * @param original 需要转化的Character[]
      * @return char[]
      */

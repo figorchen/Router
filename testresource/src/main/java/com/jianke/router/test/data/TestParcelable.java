@@ -1,4 +1,4 @@
-package com.jianke.router.test;
+package com.jianke.router.test.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -37,9 +37,6 @@ public class TestParcelable implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.parcel1);
         dest.writeString(this.parcel2);
-    }
-
-    public TestParcelable() {
     }
 
     protected TestParcelable(Parcel in) {

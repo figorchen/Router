@@ -1,5 +1,30 @@
 apply plugin: 'com.android.library'
 
+//ext {
+//    bintrayRepo = 'maven'
+//    bintrayName = 'JRouter'
+//
+//    publishedGroupId = 'com.jianke.router'
+//    libraryName = 'JRouter'
+//    artifact = 'router'
+//
+//    libraryDescription = '用于模块内和模块间相互开启Activity，并方便传值及管理跳转。'
+//
+//    siteUrl = 'https://github.com/figorchen/Router'
+//    gitUrl = 'https://github.com/figorchen/Router.git'
+//
+//    libraryVersion = '1.0.0'
+//
+//    developerId = 'figor-chen'
+//    developerName = 'ChenKe'
+//    developerEmail = '348353610@qq.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -30,3 +55,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
 //    compile project(':testresource')
 }
+apply from: './bintray.gradle'

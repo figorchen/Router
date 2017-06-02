@@ -26,53 +26,54 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 /**
- * 项目名称：Router <br/>
- * 类    名: Router.java <br/>
- * 类 描 述: 整个Router项目的入口。用于开启Activity及相互之间传递数据的工具类。<br/>
- * 版    本：1.0.0 <br/>
- * 创建时间：2016/1/12 <br/>
- * @author 谌珂 <br/>
+ * 项目名称：Router
+ * 类    名: Router.java
+ * 类 描 述: 整个Router项目的入口。用于开启Activity及相互之间传递数据的工具类。
+ * TODO: 谌珂 2017/6/2 支持传入flag、支持直接传入bundle和intent数据类型、支持uri传输数据、解决线程安全问题
+ * 版    本：1.0.0
+ * 创建时间：2016/1/12
+ * @author 谌珂
  */
 public class Router {
 
-    private final Caller caller;
+    private static Caller caller;
     private static Hashtable<Class, Object> mCache = new Hashtable<>();
-
-    private Router(Caller caller) {
-        this.caller = caller;
-    }
+    private static Router router = new Router();
 
     /**
-     * 描 述：配置开启新Activity的发起者<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/6/1 <br/>
+     * 描 述：配置开启新Activity的发起者
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/6/1
      */
     public static Router with(Context context) {
-        return new Router(Caller.getInstance(context));
+        caller = Caller.getInstance(context);
+        return router;
     }
 
     /**
-     * 描 述：配置开启新Activity的发起者<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/6/1 <br/>
+     * 描 述：配置开启新Activity的发起者
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/6/1
      */
     public static Router with(Activity activity) {
-        return new Router(Caller.getInstance(activity));
+        caller = Caller.getInstance(activity);
+        return router;
     }
 
     /**
-     * 描 述：配置开启新Activity的发起者<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/6/1 <br/>
+     * 描 述：配置开启新Activity的发起者
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/6/1
      */
     public static Router with(Fragment fragment) {
-        return new Router(Caller.getInstance(fragment));
+        caller = Caller.getInstance(fragment);
+        return router;
     }
 
     /**
-     * 描 述：获取模块内Router交互服务<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/27 <br/>
+     * 描 述：获取模块内Router交互服务
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/27
      * @param clazz 服务定义接口
      * @param <T> 传入及最终返回服务的接口类型
      * @return Router交互服务
@@ -105,9 +106,9 @@ public class Router {
     }
 
     /**
-     * 描 述：解析@Target注解，如果有class则通过Activity.class创建Intent，如果没有则通过uri创建隐式Intent<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：解析@Target注解，如果有class则通过Activity.class创建Intent，如果没有则通过uri创建隐式Intent
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      * @param method 开启Activity的某个方法
      * @param context 上下文对象
      * @return Intent
@@ -140,9 +141,9 @@ public class Router {
     }
 
     /**
-     * 描 述：解析参数列表，把数据填充进Intent<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：解析参数列表，把数据填充进Intent
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      * @param args 参数列表
      * @return 如果有requestId则返回，否则返回-1
      */

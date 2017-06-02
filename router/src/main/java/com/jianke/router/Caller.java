@@ -8,12 +8,12 @@ import android.content.Intent;
 import android.os.Build;
 
 /**
- * 项目名称：Caller <br/>
- * 类    名: Caller.java <br/>
- * 类 描 述: 封装了开启者的行为方法。<br/>
- * 版    本：1.0.0 <br/>
- * 创建时间：2016/1/12 <br/>
- * @author 谌珂 <br/>
+ * 项目名称：Caller
+ * 类    名: Caller.java
+ * 类 描 述: 封装了开启者的行为方法。
+ * 版    本：1.0.0
+ * 创建时间：2016/1/12
+ * @author 谌珂
  */
 public class Caller {
     private Context mContext;
@@ -45,9 +45,9 @@ public class Caller {
     }
 
     /**
-     * 描 述：有返回值开启Activity方法（不支持Context）。<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：有返回值开启Activity方法（不支持Context）。
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      * @param intent 开启Activity的Intent
      * @param requestId 等同于{@link Activity#startActivityForResult(Intent, int)}或{@link Fragment#startActivityForResult(Intent, int)}中的requestId
      * @throws IllegalStateException 当{@link #mActivity}、{@link #mFragment}同时为空时抛出异常。
@@ -71,9 +71,9 @@ public class Caller {
     }
 
     /**
-     * 描 述：与context做对比<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：与context做对比
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      * @param context 需要做对比的对象
      * @return 如果{@link #mContext}与context相等则返回true
      */
@@ -82,31 +82,31 @@ public class Caller {
     }
 
     /**
-     * 描 述：与context做对比<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：与context做对比
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      * @param activity 需要做对比的对象
-     * @return 如果{@link {@link #mActivity}}activity相等则返回true
+     * @return 如果{@link #mActivity}与activity相等则返回true
      */
     public boolean equalsTo(Activity activity) {
         return activity != null && activity.equals(mActivity);
     }
 
     /**
-     * 描 述：与context做对比<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：与context做对比
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      * @param fragment 需要做对比的对象
-     * @return 如果{@link {@link #mFragment}}fragment相等则返回true
+     * @return 如果{@link #mFragment}与fragment相等则返回true
      */
     public boolean equalsTo(Fragment fragment) {
         return fragment != null && fragment.equals(mFragment);
     }
 
     /**
-     * 描 述：获取一个Context对象<br/>
-     * 作 者：谌珂<br/>
-     * 历 史: (1.0.0) 谌珂 2017/5/31 <br/>
+     * 描 述：获取一个Context对象
+     * 作 者：谌珂
+     * 历 史: (1.0.0) 谌珂 2017/5/31
      */
     public Context obtainContext() {
         if(mContext != null) {

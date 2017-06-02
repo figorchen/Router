@@ -1,4 +1,4 @@
-package com.jianke.router.test;
+package com.jianke.router.test.data;
 
 import java.io.Serializable;
 

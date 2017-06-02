@@ -1,10 +1,14 @@
-package com.jianke.router.test;
+package com.jianke.router.test.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.TextView;
+
+import com.jianke.router.test.R;
+import com.jianke.router.test.data.TestParcelable;
+import com.jianke.router.test.data.TestSerializable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,8 +46,6 @@ public class LoginActivity extends Activity {
     private TextView tv26;
     private TextView tv27;
     private TextView tv28;
-    private TextView tv29;
-    private TextView tv30;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,8 +80,6 @@ public class LoginActivity extends Activity {
         tv26 = (TextView) findViewById(R.id.tv26);
         tv27 = (TextView) findViewById(R.id.tv27);
         tv28 = (TextView) findViewById(R.id.tv28);
-        tv29 = (TextView) findViewById(R.id.tv29);
-        tv30 = (TextView) findViewById(R.id.tv30);
 
         Intent intent = getIntent();
         tv1.setText(String.valueOf(intent.getIntExtra("int", -1)));

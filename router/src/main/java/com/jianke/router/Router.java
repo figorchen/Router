@@ -24,12 +24,13 @@ import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Hashtable;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * 项目名称：Router
  * 类    名: Router.java
  * 类 描 述: 整个Router项目的入口。用于开启Activity及相互之间传递数据的工具类。
- * TODO: 谌珂 2017/6/2 支持传入flag、支持直接传入bundle和intent数据类型、支持uri传输数据、解决线程安全问题
+ * TODO: 谌珂 2017/6/2 支持传入flag、支持直接传入bundle和intent数据类型、支持uri传输数据
  * 版    本：1.0.0
  * 创建时间：2016/1/12
  * @author 谌珂
@@ -39,6 +40,7 @@ public class Router {
     private static Caller caller;
     private static Hashtable<Class, Object> mCache = new Hashtable<>();
     private static Router router = new Router();
+    private static ReentrantReadWriteLock.WriteLock writeLock = new ReentrantReadWriteLock().writeLock();
 
     /**
      * 描 述：配置开启新Activity的发起者
@@ -46,6 +48,7 @@ public class Router {
      * 历 史: (1.0.0) 谌珂 2017/6/1
      */
     public static Router with(Context context) {
+        writeLock.lock();
         caller = Caller.getInstance(context);
         return router;
     }
@@ -56,6 +59,7 @@ public class Router {
      * 历 史: (1.0.0) 谌珂 2017/6/1
      */
     public static Router with(Activity activity) {
+        writeLock.lock();
         caller = Caller.getInstance(activity);
         return router;
     }
@@ -66,6 +70,7 @@ public class Router {
      * 历 史: (1.0.0) 谌珂 2017/6/1
      */
     public static Router with(Fragment fragment) {
+        writeLock.lock();
         caller = Caller.getInstance(fragment);
         return router;
     }
@@ -92,10 +97,13 @@ public class Router {
                  * 3.解析参数列表。如果包含带@RequestId注解的参数则记录其值，准备启动带返回值的方法；依次解析@Extra注解的参数，并把值放进2创建的意图中
                  * 4.拿到Caller开始调用
                  */
-                Intent intent = createIntent(method, caller.obtainContext());
-                int requestId = analyzeParams(intent, method, args);
-                caller.startActivityForResult(intent, requestId);
-
+                try {
+                    Intent intent = createIntent(method, caller.obtainContext());
+                    int requestId = analyzeParams(intent, method, args);
+                    caller.startActivityForResult(intent, requestId);
+                } finally {
+                    writeLock.unlock();
+                }
 
                 return null;
             }
